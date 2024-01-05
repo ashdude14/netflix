@@ -5,6 +5,11 @@
 
 body {
     background-color: black;
-    font-family: Lato,"Segoe UI",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Lato,"netflix-ash",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
 }
+@font-face {
+    font-family: "netflix-ash";   /*Can be any text*/
+    src: local("AirbnbCerealLight"),
+      url("../src/assets/Font/NetflixSans-Light.otf") format("truetype");
+  }
