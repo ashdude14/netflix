@@ -1,9 +1,9 @@
 import React from 'react'
-
+const bgImg="url('../assets/Images/bg.jpg')"; 
 const Navbar = () => {
   return (
    
-    <div className='flex text-white items-centre justify-between p-4 z-[100] w-full absolute'>
+    <div className="flex text-white items-centre justify-between p-4 z-[100] absolute w-full " >
        <h1 className='text-red-600 text-4xl cursor-pointer'>NETFLIX</h1>
        <div>
         <button className='text-white pr-4'>Sign In</button>
