@@ -4,6 +4,7 @@ import logo from "../assets/Images/logo1.svg";
 
 const Header = () => {
   return (
+    
     <div className='max-w-[1170px] mx-auto p-6 sm:px-[5px]'>
       <div className='grid sm:grid-cols-2 grid-cols-[30%_auto] px-[10px]'>
         <figure>
@@ -21,6 +22,7 @@ const Header = () => {
         </div>
       </div>
     </div>
+    
   );
 };
 
