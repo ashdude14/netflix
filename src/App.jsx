@@ -7,11 +7,11 @@ import Footer from "./Components/Footer";
 
 function App() {
   return (
-     <>
+     <div className=" no-scrollbar scroll-smooth">
        <Hero/>
        <FAQs/>
        <Footer/>
-    </>
+       </div>
   
  /*<>
    <Navbar/>
