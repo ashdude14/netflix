@@ -1,0 +1,15 @@
+@font-face {
+    font-family:netflix-ash;
+    src: url(./assets/Font/NetflixSans-Bold.woff2);
+
+    font-family: netflix-bold;
+    src :url(./assets/Font/NetflixSans-Bold.otf);
+    font-family : ash-test;
+    src:url(./assets/Font/GrapeNuts-Regular.ttf)
+  }
+
+
+  body {
+    font-family: netflix-ash;
+    
+  }

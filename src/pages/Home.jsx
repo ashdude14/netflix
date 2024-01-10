@@ -1,10 +1,15 @@
 import React from 'react'
-import Main from '../Components/Main'
+import Hero from '../Components/Hero'
+import FAQs from '../Components/FAQs'
+import Footer from '../Components/Footer'
+
 
 const Home = () => {
   return (
   <>
-  <Main/>
+   <Hero/>
+    <FAQs/>
+  <Footer/>
     </>
   )
 }

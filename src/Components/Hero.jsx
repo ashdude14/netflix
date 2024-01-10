@@ -1,7 +1,9 @@
 import React from 'react';
 import Header from './Header';
-const vid2="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v";
-const vid1="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v";
+import video2 from "../assets/Videos/vid2.mp4"
+import video1 from "../assets/Videos/vid1.mp4"
+//const vid2="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v";
+//const vid1="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v";
 const tv1="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png";
 const tv2="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-in.png";
 const mob1="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg";
@@ -59,7 +61,7 @@ const Hero = () => {
              PlayStation, Xbox, Chromecast,<br/>Apple TV, Blu-ray players and more.</p>
              </div>
           <div className=' relative '>
-          <video className='absolute w-[80%] left-[10%] bottom-[20%] z-[1]' src={vid1}></video>
+          <video className='absolute w-[80%] left-[10%] bottom-[20%] z-[1]' src={video1} autoPlay loop playsInline muted ></video>
             <img className='relative z-[2]' src={tv1} alt="tv" />
           
           </div>
@@ -110,7 +112,7 @@ const Hero = () => {
             <p className=' pt-[30px] text-[20px] sm:text-[25px]'>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
              </div>
           <div className=' relative '>
-          <video className='absolute w-[60%] left-[20%] bottom-[40%] z-[1]' src={vid2}></video>
+          <video className='absolute w-[60%] left-[20%] bottom-[40%] z-[1]' src={video2} autoPlay loop playsInline muted ></video>
             <img className='relative z-[2]' src={tv2} alt="tv" />
           
           </div>

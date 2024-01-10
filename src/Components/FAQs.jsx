@@ -9,7 +9,7 @@ const FAQs = () => {
       setClick(i);
     }    
   return (   
-    <div>
+    <div className='scrollbar-hide'>
         <section className=" w-[100wv]  bg-black border-t-[5px] border-t-slate-700
      text-white sm:py-[50px] py-[70px] ">
          <div className=' max-w-[1170px] mx-auto px-[15px]' > 
@@ -19,7 +19,7 @@ const FAQs = () => {
    data.map((item,index)=>(
     <div className='bg-[#2d2d2d] mb-[20px]'>
    <div className=' relative text-white text-[30px] p-[20px] border-[2px] border-black 
-   hover:bg-[rgb(78,78,78)] duration-300 cursor-pointer 'onClick={()=>handleClick(index)}  > <h3> {item.quest}</h3>
+   hover:bg-[rgb(78,78,78)] duration-300 cursor-pointer 'onClick={()=>handleClick(index)}  > <h3 key={index}> {item.quest}</h3>
     <span className=' absolute right-[20px] top-[10px] text-[40px] align-middle'>
           {click === index? 'x' : '+'}
             </span>

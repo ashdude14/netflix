@@ -8,7 +8,7 @@ const Footer = () => {
      <div className='flex max-w-[1170px] mx-auto px-[15px] item-center justify-between gap-10' > 
   <h1 className='text-white '>Author - Aashish Kumar Singh</h1>
   <h1 className='text-white'> Copyright © {new Date().getFullYear()}. All rights are reserved.</h1>
-  <div className=" items-center ">
+  <div className=" items-center   ">
        <h4 className='text-white '>let's connect!</h4>
        <h4> LinkedIn</h4>
                   <a

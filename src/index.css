@@ -3,26 +3,19 @@
 @tailwind utilities;
 
 
-body {
-    background-color: black;
-    font-family: Lato,"netflix-ash",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-}
-@font-face {
-    font-family: "netflix-ash";   /*Can be any text*/
-    src: local("AirbnbCerealLight"),
-      url("../src/assets/Font/NetflixSans-Light.otf") format("truetype");
+
+  @font-face {
+    font-family:netflix-ash;
+    src: url(./assets/Font/GrapeNuts-Regular.ttf);
+
+    font-family: netflix-bold;
+    src :url(./assets/Font/NetflixSans-Bold.otf);
+    font-family : ash-test;
+    src:url(./assets/Font/GrapeNuts-Regular.ttf)
   }
 
- 
-@layer utilities {
-      /* Hide scrollbar for Chrome, Safari and Opera */
-      .no-scrollbar::-webkit-scrollbar {
-          display: none;
-      }
-     /* Hide scrollbar for IE, Edge and Firefox */
-      .no-scrollbar {
-          -ms-overflow-style: none;  /* IE and Edge */
-          scrollbar-width: none;  /* Firefox */
-    }
+
+  body {
+    font-family: netflix-ash;
+    
   }
