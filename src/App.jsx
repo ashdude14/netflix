@@ -1,9 +1,11 @@
 import { Routes,Route } from "react-router-dom"
-import { MdOutlineTranslate } from "react-icons/md";
+
 
 import "./App.css"
 import Home from "./pages/Home";
 import Footer from "./Components/Footer";
+
+import LogIn from "./pages/LogIn";
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/ash" element={<Footer/>} />
+        <Route path="/login" element={<LogIn/> } />
       </Routes>
        </div>
   

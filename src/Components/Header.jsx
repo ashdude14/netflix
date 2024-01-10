@@ -1,6 +1,7 @@
 import React from 'react';
 import { MdOutlineTranslate } from "react-icons/md";
 import logo from "../assets/Images/logo1.svg";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -18,7 +19,10 @@ const Header = () => {
               <option value="Hindi">Hindi</option>
             </select>
           </div>
-          <button className='bg-red-700 text-white rounded-[5px] h-[30px] w-[100px]'>Sign In</button>
+          <Link to = "/login">
+          <button className='bg-red-700 text-white rounded-[5px] h-[30px] w-[100px] ' onClick={()=>{}}>Sign In</button>
+          </Link>
+        
         </div>
       </div>
     </div>
