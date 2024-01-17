@@ -1,9 +1,10 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import endpoints from '../Services/MovieServices';
+import endpoints, { createImageUrl } from '../Services/MovieServices';
 import logo from '../assets/Images/logo1.svg';
 import Slider from '../Components/Slider';
-const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/original';
+import MovieRow from '../Components/MovieRow';
+
 
 const LandingPage = () => {
   const [movie, setMovie] = useState({});
@@ -43,7 +44,7 @@ const LandingPage = () => {
         <div className='w-full h-full bg-gradient-to-r from-black '>
           <img
             className='w-full h-full object-cover object-top'
-            src={IMAGE_BASE_URL + backdrop_path}
+            src={createImageUrl(backdrop_path,"original")}
             alt={title}
           />
           <div className='absolute bottom-0 w-full top-[10%] lg:top-[25%] left-0 md:p-8 right-0 text-white p-4'>
@@ -64,6 +65,10 @@ const LandingPage = () => {
         </div>
       </div>-
       {/* main banner ended*/}
+      <MovieRow title="upcoming" url={endpoints.upcoming}/>
+      <MovieRow title="trending" url={endpoints.trending}/>
+      <MovieRow title="top rated" url={endpoints.topRated}/>
+      <MovieRow title="popular" url={endpoints.popular}/>
     </div>
   );
 };
