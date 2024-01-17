@@ -6,7 +6,8 @@
 # Router --- done 
 # Video Auto Play ?? --done 
 # Slider
-# Horizontal moviie Card
+# Horizontal moviie Card 
+## Responsive movie card + horizontal Scrollbar?
 # .......BACK-END BUILDING .......
 # Firebase SetUP?
 # TheMovieDB API ?
