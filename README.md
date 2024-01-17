@@ -10,7 +10,10 @@
 # .......BACK-END BUILDING .......
 # Firebase SetUP?
 # TheMovieDB API ?
+# API END-POINTS 
+## make .env to store key and add it in .gitignore 
 
+# FireBase 
 
 
 

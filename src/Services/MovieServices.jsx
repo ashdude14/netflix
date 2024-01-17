@@ -8,5 +8,8 @@ topRated :  `${movieBaseUrl}/movie/top_rated?api_key=${key}`,
 trending:  `${movieBaseUrl}/movie/popular?api_key=${key}&language=en-US&page=2`,
 upcoming :  `${movieBaseUrl}/movie/upcoming?api_key=${key}`,
 };
-console.log(`${movieBaseUrl}/movie/popular?api_key=${key}`);    
+
+export function createImageUrl(fileName,size){
+    return `https://image.tmdb.org/t/p/${size}/${fileName}`;
+}
 export default endpoints;
