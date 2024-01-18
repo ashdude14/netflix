@@ -1,23 +1,38 @@
 import React, { useState } from 'react';
 import logo from "../assets/Images/logo1.svg";
+import {auth,db } from "../Services/firebase";
+import { UserAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
+
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isSignUp, setIsSignUp] = useState(false);
 
+  const {user,signUp} =UserAuth();
+  const navigate= useNavigate();
+
   const handleToggleMode = () => {
     setIsSignUp((prev) => !prev);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add your authentication logic here
-    console.log('Email:', email);
-    console.log('Password:', password);
-    // Reset the form fields
-    setEmail('');
-    setPassword('');
+    
+     if(signUp){
+      try{
+        await signUp(email,password );
+        navigate('/home')
+      }catch(err){
+        console.log(err);
+      }
+     }
+      // Reset the form fields
+      setEmail('');
+      setPassword('');
+    
   };
+  
 
   return (
     
@@ -28,7 +43,7 @@ const LoginForm = () => {
           <img className="w-[100px] sm:w-[150px] sm:h-[70px] p-4 mx-8 " src={logo} alt="netflix" />
         </figure>
     <div className="flex justify-center items-center h-screen">
-      <div className="bg-black/60 p-8 rounded-lg shadow-md w-96">
+      <div className="bg-black/60  p-8 rounded-lg shadow-md w-96">
         <h1 className="text-white text-2xl font-bold mb-6">{isSignUp ? 'Sign Up' : 'Log In'}</h1>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
@@ -38,6 +53,8 @@ const LoginForm = () => {
             <input
               className="w-full px-3 py-2 text-white bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:border-white"
               type="email"
+              placeholder='email'
+              autoComplete='email'
               id="email"
               required
               value={email}
@@ -52,6 +69,8 @@ const LoginForm = () => {
               className="w-full px-3 py-2 text-white bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:border-white"
               type="password"
               id="password"
+              placeholder='password'
+              autoComplete='password'
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
