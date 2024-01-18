@@ -15,14 +15,12 @@
 ## make .env to store key and add it in .gitignore 
 
 # FireBase 
-
-
-
-
-
-
-
-
-# Refrences
+.............................................
+# Things to be completed (Final task)
+## 1. no-scrollbar
+## 2. slider
+## 3. responsive movie card
+## 4. FireBase Authentication
+#  Refrences
 1) For Dom Manipulation
 [see this for alternative for querySelector](https://www.meje.dev/blog/useref-not-queryselector)
