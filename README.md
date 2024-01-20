@@ -21,8 +21,11 @@
 ## 2. slider  ---done
 ## 3. responsive movie card -- done
 ## 4. FireBase Authentication & DataBase ---done
-## 5. potected routing -- (partally done)
-## 6. Add profile and Logout button on main page (partially done)
+## 5. potected routing -- (partally done) --->>>done
+## 6. Logout button on main page (partially done)-->>done
+...........................................................
+## fireBase hosting 
+## no-scrollbar
 #  Refrences
 1) For Dom Manipulation
 [see this for alternative for querySelector](https://www.meje.dev/blog/useref-not-queryselector)

@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import logo from "../assets/Images/logo1.svg";
 import {auth,db } from "../Services/firebase";
 import { UserAuth } from '../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isSignUp, setIsSignUp] = useState(false);
-
+ 
   const {user,signUp,logIn} =UserAuth();
   
-  const navigate= useNavigate();
+
 
   const handleToggleMode = () => {
     setIsSignUp((prev) => !prev);
@@ -19,23 +19,12 @@ const LoginForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    
-      try{
         if(isSignUp){
-        await signUp(email,password );
-        navigate('/home')}
+         signUp(email,password );
+        }
         else{
-          await logIn(email,password);
-          navigate('/home');
-      }
-    }
-      catch(err){
-        console.log(err);
-      }
-     
-     
-      // Reset the form fields
+           logIn(email,password);
+        }
       setEmail('');
       setPassword('');
     

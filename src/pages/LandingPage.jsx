@@ -5,18 +5,18 @@ import logo from '../assets/Images/logo1.svg';
 import Slider from '../Components/Slider';
 import MovieRow from '../Components/MovieRow';
 import { UserAuth } from '../context/AuthContext';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 
 const LandingPage = () => {
   const [movie, setMovie] = useState({});
  const {logOut} =UserAuth();
-  
+  const navigate=useNavigate();
 
   const outHandler= async () =>{
     try {
       await logOut();
-      <Navigate to ='/' />
+      navigate('/');
     }
     catch(err) {console.log(err);}
   }

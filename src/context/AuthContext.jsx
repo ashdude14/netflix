@@ -1,47 +1,65 @@
-import {createContext,useContext,useState} from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 import {
-    createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
-    signOut,
-    onAuthStateChanged
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
 } from "firebase/auth";
+import { useNavigate } from 'react-router-dom';
+import { auth, db } from "../Services/firebase";
 
-import {auth,db} from "../Services/firebase";
-import { useEffect } from "react";
-const AuthContext=createContext();    
+const AuthContext = createContext();
 
-export function  AuthContextProvider({children}) {
-    const [user,setUser]=useState({});
+export function AuthContextProvider({ children }) {
+  const [user, setUser] = useState({});
+  const navigate = useNavigate();
 
-useEffect(()=>{
-    const unsubs=onAuthStateChanged(auth,((currentuser)=>{
-        setUser(currentuser);   
-    }))
-   
+  useEffect(() => {
+    const unsubs = onAuthStateChanged(auth, (currentuser) => {
+      setUser(currentuser);
+    });
 
-    return ()=>{
-        unsubs();
+    return () => {
+      unsubs();
+    };
+
+  }, []);
+
+  async function signUp(email, password) {
+    try {
+      const response = await createUserWithEmailAndPassword(auth, email, password);
+      const { user } = response;
+      alert('Successfully signed up as ' + user.email+" click ok to continue!");
+      navigate('/home');
+    } catch (err) {
+      alert("User exists!");
+      navigate('/login');
     }
-   
-},[])
+  }
 
-function signUp(email,password){
-createUserWithEmailAndPassword(auth,email,password);
-}
+  async function logIn(email, password) {
+    try {
+      const response = await signInWithEmailAndPassword(auth, email, password);
+      const { user } = response;
+      alert('Successfully logged in as ' + user.email+" click ok to continue!");
+      navigate('/home');
+    } catch (err) {
+      alert(err);
+      navigate('/login');
+    }
+  }
 
-function logIn(email,password) {
-    signInWithEmailAndPassword(auth,email,password);
-}
-function logOut(){
+  function logOut() {
     return signOut(auth);
-}
-    return (
-  <AuthContext.Provider value={{user, signUp,logIn,logOut}}>
-    {children}
-  </AuthContext.Provider>
-    );
-};
+  }
 
-export function UserAuth(){
-    return useContext(AuthContext);
+  return (
+    <AuthContext.Provider value={{ user, signUp, logIn, logOut }}>
+      {children}
+    </AuthContext.Provider>
+  );
+}
+
+export function UserAuth() {
+  return useContext(AuthContext);
 }
