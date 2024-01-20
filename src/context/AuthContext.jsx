@@ -14,13 +14,15 @@ export function  AuthContextProvider({children}) {
     const [user,setUser]=useState({});
 
 useEffect(()=>{
-    const unsubs=onAuthStateChanged(auth,(currentuser)=>{
+    const unsubs=onAuthStateChanged(auth,((currentuser)=>{
         setUser(currentuser);   
-    })
+    }))
+   
 
     return ()=>{
         unsubs();
     }
+   
 },[])
 
 function signUp(email,password){

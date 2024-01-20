@@ -9,7 +9,8 @@ const LoginForm = () => {
   const [password, setPassword] = useState('');
   const [isSignUp, setIsSignUp] = useState(false);
 
-  const {user,signUp} =UserAuth();
+  const {user,signUp,logIn} =UserAuth();
+  
   const navigate= useNavigate();
 
   const handleToggleMode = () => {
@@ -19,14 +20,21 @@ const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-     if(signUp){
+    
       try{
+        if(isSignUp){
         await signUp(email,password );
-        navigate('/home')
-      }catch(err){
+        navigate('/home')}
+        else{
+          await logIn(email,password);
+          navigate('/home');
+      }
+    }
+      catch(err){
         console.log(err);
       }
-     }
+     
+     
       // Reset the form fields
       setEmail('');
       setPassword('');

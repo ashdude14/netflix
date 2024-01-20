@@ -4,10 +4,22 @@ import endpoints, { createImageUrl } from '../Services/MovieServices';
 import logo from '../assets/Images/logo1.svg';
 import Slider from '../Components/Slider';
 import MovieRow from '../Components/MovieRow';
+import { UserAuth } from '../context/AuthContext';
+import { Navigate } from 'react-router-dom';
 
 
 const LandingPage = () => {
   const [movie, setMovie] = useState({});
+ const {logOut} =UserAuth();
+  
+
+  const outHandler= async () =>{
+    try {
+      await logOut();
+      <Navigate to ='/' />
+    }
+    catch(err) {console.log(err);}
+  }
 
   useEffect(() => {
     axios.get(endpoints.popular).then((res) => {
@@ -32,16 +44,25 @@ const LandingPage = () => {
   return (
     <div className='bg-black h-screen w-full '>
       {/* main banner started*/}
-      <div className='relative h-[40%] lg:h-[50%]'>
+      <div className='h-[40%] lg:h-[50%] '>
+   
+        <div className=' flex justify-between relative'>
+          <div>
         <figure>
           <img
-            className='px-4 absolute w-[100px] sm:w-[150px] sm:h-[70px]'
+            className='mx-4 w-[100px] sm:w-[150px] p-4 sm:h-[70px]'
             src={logo}
             alt='netflix'
             
           />
         </figure>
-        <div className='w-full h-full bg-gradient-to-r from-black '>
+        </div>
+        <div>
+        <button className='bg-red-500 text-sm md:text-xl p-2 text-white rounded-sm mr-4 mt-4 ' onClick={outHandler}>Log out</button>
+        </div>
+        </div>
+      
+        <div className='w-full h-full bg-gradient-to-r from-black a'>
           <img
             className='w-full h-full object-cover object-top'
             src={createImageUrl(backdrop_path,"original")}

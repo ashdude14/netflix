@@ -17,12 +17,12 @@
 # FireBase 
 .............................................
 # Things to be completed (Final task)
-## 1. no-scrollbar
-## 2. slider
-## 3. responsive movie card
+## 1. no-scrollbar (partially done viz-for some div)
+## 2. slider  ---done
+## 3. responsive movie card -- done
 ## 4. FireBase Authentication & DataBase ---done
-## 5. potected routing
-## 6. Add profile and Logout button on main page
+## 5. potected routing -- (partally done)
+## 6. Add profile and Logout button on main page (partially done)
 #  Refrences
 1) For Dom Manipulation
 [see this for alternative for querySelector](https://www.meje.dev/blog/useref-not-queryselector)
