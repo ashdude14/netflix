@@ -26,6 +26,12 @@
 ...........................................................
 ## fireBase hosting 
 ## no-scrollbar
+
+# Issues 
+## mobile responsive main banner
+## password length should be min 8 character else alert user
+## no-scrollbar
+
 #  Refrences
 1) For Dom Manipulation
 [see this for alternative for querySelector](https://www.meje.dev/blog/useref-not-queryselector)
