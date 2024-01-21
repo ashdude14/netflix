@@ -26,7 +26,13 @@ export function AuthContextProvider({ children }) {
   }, []);
 
   async function signUp(email, password) {
+    if(password.length<8) {
+      alert ("Minimum password length should be 8 character!");
+      navigate('/login');
+    }
+    else {
     try {
+    
       const response = await createUserWithEmailAndPassword(auth, email, password);
       const { user } = response;
       alert('Successfully signed up as ' + user.email+" click ok to continue!");
@@ -36,6 +42,7 @@ export function AuthContextProvider({ children }) {
       navigate('/login');
     }
   }
+}
 
   async function logIn(email, password) {
     try {

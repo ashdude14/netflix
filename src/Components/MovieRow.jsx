@@ -24,10 +24,12 @@ const MovieRow = ({ title, url }) => {
     <div>
       <h2 className='md:text-xl p-4 capitalize text-white text-bold'>{title}</h2>
       <div className="relative  flex item-center group">
+      <div className=" hidden sm:block">
         <MdChevronLeft 
           onClick={()=>{slide(-500)}}
         className=" bg-white  rounded-full absolute left-2 opacity-80 text-gray-700 
         z-10 hidden group-hover:block cursor-pointer align-middle mt-20 "  size={40} />
+        </div>
       <div id={`slider`+rowId} 
       className="flex w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide"
       >
@@ -37,10 +39,12 @@ const MovieRow = ({ title, url }) => {
     </div>
   ))}
 </div>
+ <div className=" hidden sm:block">
     <MdChevronRight
        onClick={()=>{slide(500)}}
         className=" bg-white  rounded-full absolute right-2 opacity-80 text-gray-700 
         z-10 hidden group-hover:block cursor-pointer align-middle mt-20 " size={40} />
+        </div>
       </div>
     </div>
   );

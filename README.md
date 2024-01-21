@@ -29,7 +29,7 @@
 
 # Issues 
 ## mobile responsive main banner
-## password length should be min 8 character else alert user
+## password length should be min 8 character else alert user -- done
 ## no-scrollbar
 
 #  Refrences
