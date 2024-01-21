@@ -9,7 +9,7 @@ import ProtectedRoute from "./Components/ProtectedRoute";
 
 function App() {
   return (
-    <div className=" overflow-y-scroll overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide">
+    <div className=" scroll-smooth scrollbar-hide">
       <AuthContextProvider>
         <Routes>
           <Route path="/" element={<Home />} />
