@@ -1,5 +1,6 @@
-<div style="background-color: #FFC0CB; padding: 20px;">
-# <span style="color: #E50914;">Netflix Clone Project</span>
+<div style="background-color: black; padding: 20px;">
+
+## <span style="color: #E50914;">Netflix Clone by Aashish Kumar Singh</span>
 
 This project is a clone of the Netflix website, created for educational purposes and to showcase web development skills.
 
@@ -10,12 +11,12 @@ This project is a clone of the Netflix website, created for educational purposes
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
-- [Contributing](#contributing)
+
 
 
 ## <span style="color: #E50914;">Demo</span>
 
-![here is the demo!](../netflix/src/assets/Videos/netflix-gif.gif)
+![here is the demo!](../netflix/src/assets/Videos/netflix-gif.gif).
 
 ## <span style="color: #E50914;">Features</span>
 
@@ -64,24 +65,22 @@ This project is a clone of the Netflix website, created for educational purposes
     npm run dev
 
 ## <span style="color: #E50914;">Project Structure</span>
- 
- ``bash
-   /netflix-clone
-   /public
-   /src
-    /assests
-    /components
-    /context
-    /pages
-    /Services
-    App.js
-    App.css
-    main.jsx
-    requests.jsx
-    index.js
-  .gitignore
-  package.json
-  README.md
 
-## <span style="color: #E50914;">Contributing</span>
-  If you'd like to contribute to this project, feel free to fork the repository and submit a pull request.
+   ```bash
+    /netflix-clone
+    /public
+    /src
+     /assets
+     /components
+     /context
+     /pages
+     /Services
+     App.js
+     App.css
+     main.jsx
+     requests.jsx
+     index.js
+    .gitignore
+     package.json
+     README.md 
+  
