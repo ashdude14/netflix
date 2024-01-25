@@ -4,7 +4,7 @@ import endpoints, { createImageUrl } from '../Services/MovieServices';
 import logo from '../assets/Images/logo1.svg';
 import MovieRow from '../Components/MovieRow';
 import { UserAuth } from '../context/AuthContext';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 const LandingPage = () => {

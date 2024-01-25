@@ -5,8 +5,8 @@ import {
   signOut,
   onAuthStateChanged,
 } from "firebase/auth";
-import { useNavigate } from 'react-router-dom';
-import { auth, db } from "../Services/firebase";
+import { useNavigate } from "react-router-dom";
+import { auth, db } from "../Services/ FirebaseConfig";
 
 const AuthContext = createContext();
 
@@ -22,37 +22,42 @@ export function AuthContextProvider({ children }) {
     return () => {
       unsubs();
     };
-
   }, []);
 
   async function signUp(email, password) {
-    if(password.length<8) {
-      alert ("Minimum password length should be 8 character!");
-      navigate('/login');
-    }
-    else {
-    try {
-    
-      const response = await createUserWithEmailAndPassword(auth, email, password);
-      const { user } = response;
-      alert('Successfully signed up as ' + user.email+" click ok to continue!");
-      navigate('/home');
-    } catch (err) {
-      alert("User exists!");
-      navigate('/login');
+    if (password.length < 8) {
+      alert("Minimum password length should be 8 character!");
+      navigate("/login");
+    } else {
+      try {
+        const response = await createUserWithEmailAndPassword(
+          auth,
+          email,
+          password
+        );
+        const { user } = response;
+        alert(
+          "Successfully signed up as " + user.email + " click ok to continue!"
+        );
+        navigate("/home");
+      } catch (err) {
+        alert("User exists!");
+        navigate("/login");
+      }
     }
   }
-}
 
   async function logIn(email, password) {
     try {
       const response = await signInWithEmailAndPassword(auth, email, password);
       const { user } = response;
-      alert('Successfully logged in as ' + user.email+" click ok to continue!");
-      navigate('/home');
+      alert(
+        "Successfully logged in as " + user.email + " click ok to continue!"
+      );
+      navigate("/home");
     } catch (err) {
       alert(err);
-      navigate('/login');
+      navigate("/login");
     }
   }
 

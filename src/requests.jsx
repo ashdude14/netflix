@@ -1,4 +1,4 @@
-const key="af5fce3f491f9c138bf5547028bd9997";
+const key=import.meta.env.VITE_TMDB_KEY;
 
 
 
