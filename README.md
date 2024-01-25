@@ -1,3 +1,4 @@
+<div style="background-color: #FFC0CB; padding: 20px;">
 # <span style="color: #E50914;">Netflix Clone Project</span>
 
 This project is a clone of the Netflix website, created for educational purposes and to showcase web development skills.
