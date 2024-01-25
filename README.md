@@ -1,8 +1,8 @@
-# Netflix Clone Project
+# <span style="color: #E50914;">Netflix Clone Project</span>
 
 This project is a clone of the Netflix website, created for educational purposes and to showcase web development skills.
 
-## Table of Contents
+## <span style="color: #E50914;">Table of Contents</span>
 
 - [Demo](#demo)
 - [Features](#features)
@@ -12,11 +12,11 @@ This project is a clone of the Netflix website, created for educational purposes
 - [Contributing](#contributing)
 
 
-## Demo
+## <span style="color: #E50914;">Demo</span>
 
 Include a link or GIF showcasing your project in action.
 
-## Features
+## <span style="color: #E50914;">Features</span>
 
 - **Responsive Design:** The website is designed to be accessible and user-friendly on various devices.
 - **Movie and TV Show Listings:** Display a collection of movies and TV shows with relevant information.
@@ -24,29 +24,29 @@ Include a link or GIF showcasing your project in action.
 - **Video Playback:** Integrate a video player for streaming trailers or clips.
 
 
-
-## Technologies Used
+## <span style="color: #E50914;">Technologies Used</span>
 
 - **Frontend:**
   - React
-  - Tailwind-CSS (or a preprocessor like SCSS)
+  - Tailwind-CSS 
   
 
 - **Backend:**
   - NodeJS
 
 - **Authentication:**
-  - Firebase Authentication (or any other authentication system)
+  - Firebase Authentication 
 
 - **Deployment:**
   - [Hosting platform, e.g., Vercel, Netlify]
 
-## Getting Started
+## <span style="color: #E50914;">Getting Started</span>
 
 1. **Clone the Repository:**
 
    ```bash
    git clone https://github.com/ashdude14/netflix-clone.git
+
 
 2. **Install all dependencies**  
 
@@ -62,10 +62,10 @@ Include a link or GIF showcasing your project in action.
    ```bash
     npm run dev
 
-## Project Structure
+## <span style="color: #E50914;">Project Structure</span>
  
  ``bash
-  /netflix-clone
+ /netflix-clone
   /public
   /src
     /assests
@@ -82,5 +82,5 @@ Include a link or GIF showcasing your project in action.
   package.json
   README.md
 
-## Contributing
+## <span style="color: #E50914;">Contributing</span>
   If you'd like to contribute to this project, feel free to fork the repository and submit a pull request.
