@@ -48,7 +48,7 @@ Include a link or GIF showcasing your project in action.
    ```bash
    git clone https://github.com/ashdude14/netflix-clone.git
 
- 2. **Install all dependencies**  
+2. **Install all dependencies**  
 
    ```bash
     npm install
