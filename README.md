@@ -15,7 +15,7 @@ This project is a clone of the Netflix website, created for educational purposes
 
 ## <span style="color: #E50914;">Demo</span>
 
-Include a link or GIF showcasing your project in action.
+![here is the demo!](../netflix/src/assets/Videos/netflix-gif.gif)
 
 ## <span style="color: #E50914;">Features</span>
 
@@ -66,9 +66,9 @@ Include a link or GIF showcasing your project in action.
 ## <span style="color: #E50914;">Project Structure</span>
  
  ``bash
- /netflix-clone
-  /public
-  /src
+   /netflix-clone
+   /public
+   /src
     /assests
     /components
     /context
